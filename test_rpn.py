@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+
+# Alexandra Brown
+# alexbro
+# eecs398 w17 week 10
+
 import unittest
 import rpn
 
