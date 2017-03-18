@@ -6,6 +6,7 @@
 
 import unittest
 import rpn
+import coveralls
 
 
 class TestBasics(unittest.TestCase):
