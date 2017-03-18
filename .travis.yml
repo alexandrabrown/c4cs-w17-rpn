@@ -5,6 +5,6 @@ before_install:
   - pip install pytest pytest-cov
   - pip install coveralls
 # command to run tests
-script: coverage test_rpn.py
+script: coverage run test_rpn.py
 after_success:
   coveralls
