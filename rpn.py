@@ -14,6 +14,7 @@ OPERATORS = {
             '^' : operator.pow
             }
 
+
 def calculate(arg):
     stack = []
 
@@ -30,10 +31,12 @@ def calculate(arg):
 
     return stack.pop()
 
+
 def main():
     while True:
         result = calculate(input('rpn calc> '))
         print('Result:', result)
+
 
 if __name__ == '__main__':
     main()
