@@ -1,7 +1,8 @@
 language: python
 python:
   - "3.5"
-install:
+before_install:
+  - pip install pytest pytest-cov
   - pip install coveralls
 # command to run tests
 script: python3 test_rpn.py
