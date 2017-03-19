@@ -7,4 +7,5 @@ before_install:
 # command to run tests
 script: coverage run test_rpn.py
 after_success:
-  coveralls
+  - coverage report --omit '/home/travis/virtualenv/python2.7.9/lib/python2.7/site-packages/*'
+  - coveralls

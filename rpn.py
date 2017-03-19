@@ -5,6 +5,10 @@
 # eecs398 w17 week 10
 
 import operator
+import readline
+import colored
+from colored import stylize
+
 
 OPERATORS = {
             '+' : operator.add,
@@ -17,6 +21,15 @@ OPERATORS = {
 
 def calculate(arg):
     stack = []
+
+    if 'quit' in arg:
+        print(stylize('Quitting...', colored.fg('blue_violet')))
+        exit(0)
+
+    for op in OPERATORS:
+        if op in arg:
+            print(stylize(op, colored.fg('blue') +
+                          colored.bg('yellow') + colored.attr('bold')))
 
     for operand in arg.split():
         try:
@@ -35,6 +48,10 @@ def calculate(arg):
 def main():
     while True:
         result = calculate(input('rpn calc> '))
+        if result < 0:
+            result = stylize(result, colored.fg('red'))
+        elif result > 0 and result < 1:
+            result = stylize(result, colored.fg('green'))
         print('Result:', result)
 
 
